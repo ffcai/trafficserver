@@ -1,0 +1,18 @@
+{ "server-group" : {
+    "name" : "origin-hosts",
+    "members" : [ {
+        "name" : "group1",
+        "servers" : [
+          { "name" : "httpbin.org", "protocol" : "http" }
+        ],
+        "routing" : "round-robin"
+      }, {
+        "name" : "group2",
+        "servers" : [
+          { "name" : "httpbin.org", "protocol" : "https" }
+        ],
+        "routing" : "round-robin"
+      }
+    ]
+  }
+}

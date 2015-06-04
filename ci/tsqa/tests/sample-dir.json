@@ -1,0 +1,22 @@
+{ "domain" :
+  { "name" : "origin.yahoo.com",
+    "port" : 80,
+    "protocol" : "http"
+   },
+  "directives" :
+  [
+    { "route" : {
+        "filters" : [
+          { "sample" : {
+              "fraction" : 0.9,
+              "partition" : 1,
+              "source" : "bcookie",
+              "target" : "group1"
+             }
+          }
+        ],
+        "target" : "group2"
+      }
+    }
+  ]
+}
